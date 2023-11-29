@@ -1,0 +1,634 @@
+/*================================================*/
+.accent{
+    background-color: var(--accent-color);
+}
+.accent:hover{
+    background-color: var(--accent-lighter);
+    cursor: pointer;
+}
+.container{
+    /*text-align: center;*/
+}
+
+/*========================[ PROGRESS BAR ]============================*/
+.progressBar{
+    width: 86px;
+    height: 135px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0.3rem;
+    display: block;
+    overflow: hidden;
+}
+.fill{
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--water);
+    position: absolute;
+    bottom: 15px;
+    z-index: 2;
+    text-align: center;
+    margin: 0;
+    transition: 1s;
+}
+.pbChildren{
+    color: var(--text);
+    z-index: 5;
+    height: 100%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+/*========================[ COUNTER ]============================*/
+#counter{
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    min-width: 50%;
+}
+#buttons{
+    margin: 1rem;
+}
+#counter h1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/*===================[ WATER INTAKE ]======================*/
+#WaterIntake{
+    text-align: center;
+}
+#glassContainer{
+    position: relative;
+}
+#glassContainer > img{
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: 0;
+}
+/*========================[ LOGIN ]============================*/
+#LoginLogo{
+ width: 70%;
+}
+#login p{
+    margin: 0;
+}
+#loginWrapper{
+    text-align: center;
+}
+
+#login div{
+ width: 100%;
+}
+#login h1, #login h2{
+    padding: 0;
+    margin: 0.5rem;
+}
+#inputFields{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#home{
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+
+    transition: 1s;
+}
+#dashWrapper{
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 5rem)
+}
+#login img[alt='Google Logo']{
+    margin-right: 0.5rem;
+}
+/*========[REGISTER & FORGOT PASSWORD]=============*/
+#Register img:not(#CornerButton img), #PasswordReset img:not(#CornerButton img){
+    width: 3rem;
+    height: 3rem;
+}
+/*======================[SET GOAL]==================*/
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+}
+@keyframes blur-in{
+0%{
+    filter: blur(0);
+}
+    100%{
+        filter: blur(10px);
+    }
+}
+#blurlayer{
+    z-index: 7;
+    animation: blur-in 1s;
+    animation-iteration-count: 1;
+}
+#setGoal{
+    display: none;
+}
+/*============[Sleep]============*/
+#NightToDay{
+    max-width: 90%;
+}
+#Sleep input{
+    width: 4.5rem;
+}
+#Sleep label{
+    display: block;
+}
+/*============[Steps]============*/
+#StepsCounter{
+    font-size: 5rem;
+    opacity: 0.8;
+    z-index: 2;
+    transition: linear 1s;
+}
+#StepsCounter:hover{
+    opacity: 1;
+}
+#Steps #goal{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    margin: 0;
+}
+#beachSetup{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+}
+#Steps img[alt=lighthouse]{
+    height: 60%;
+    position: absolute;
+    right: 13%;
+    bottom: 23%;
+    z-index: 4;
+    transition: 1s;
+}
+#Steps img[alt=beach], #Steps img[alt=sea]{
+    width: 100%;
+    position: absolute;
+    bottom: 12%;
+    z-index: 3;
+
+}
+#Steps img[alt=clouds]{
+    height: 25%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 1;
+    transition: 0.5s;
+    opacity: 0.3;
+    animation-name: blinkDim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#Steps img[alt=surfer]{
+    height: 25%;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    z-index: 5;
+    transition: 0.5s;
+}
+#Steps img[alt=sea]{
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+}
+#Steps #trendsBt{
+    z-index: 5;
+}
+#Steps h4{
+    margin-bottom: 0.5rem;
+}
+/* goal completed */
+#Steps .goalCompleted img[alt=sea]{
+    opacity: 1;
+}
+#Steps .goalCompleted img[alt=lighthouse],  #Steps .goalCompleted img[alt=beach]{
+    opacity: 0;
+    transition: 1s;
+}
+#Steps .goalCompleted img[alt=surfer]{
+    display: none;
+}
+/*-----*/
+
+#StepsDisplayCard .progressBar{
+    height: 1rem;
+    position: absolute;
+    bottom: 15%;
+    width: 80%;
+    border-radius: var(--border-radius-s);
+}
+
+#StepsDisplayCard #fillbar{
+    background-color: var(--input-bg);
+}
+#StepsDisplayCard .fill{
+    bottom: 0;
+    border-radius: var(--border-radius-s);
+}
+/**===================[ BMI ]=============*/
+
+@keyframes rotation1 {
+    0%{ rotate: 0deg;}
+
+    50%{ rotate: 180deg;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    }
+    100%{ rotate: 360deg;}
+}
+@keyframes rotation2 {
+    0%{ rotate: 0deg;}
+
+    50%{ rotate: 180deg;
+        border-radius: 63% 39% 66% 35% / 49% 40% 57% 47% ;
+    }
+    100%{ rotate: 360deg;}
+}
+
+#BMI .animatedShape{
+    border: 1px solid var(--water);
+    border-radius: 50%;
+    width: 60%;
+    height: 60%;
+    animation-name: rotation1;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#BMI #a2{
+    animation-delay: 2s;
+    animation-name: rotation2;
+}
+
+#BMI #a3{
+    animation-delay: 4s;
+}
+
+#BMI p{
+    margin: 0;
+    text-align: center;
+}
+#BMI input{
+    width: 35%;
+}
+
+/**===================[ Calories ]==========*/
+img[alt=fire]{
+    animation-name: blinkBright;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/**===================[ Exercise ]==========*/
+/*#exercisePopUp #categories{
+    border-radius: var(--border-radius-l) var(--border-radius-l) 0 0;
+}
+#exercisePopUp #details{
+    border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+}*/
+#exercisePopUp section{
+    box-sizing: border-box;
+    padding: 1.5rem;
+    width: 100%;
+    transition: 0.5s;
+}
+
+#exercisePopUp .active{
+    height: 70%;
+    /*background-color: blue;*/
+}
+#exercisePopUp .disabled{
+    opacity: 0.7;
+    backdrop-filter: blur(3px);
+    height: 30%;
+    /*background-color: red;*/
+    background-color: var(--transp-divider);
+    overflow: hidden;
+}
+#exercisePopUp .disabled > *{
+    filter: blur(3px);
+    pointer-events: none;
+}
+#categoriesContainer{
+justify-content: center;
+    overflow-y: scroll;
+    max-height: calc(100% - 3.75rem);
+}
+#exerciseInput{
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+#exerciseInput input{
+    max-width: 30%;
+}
+#exerciseInput label{
+    width: 100%;
+    display: block;
+    height: 3.5rem;
+}
+#exerciseInput, #exerciseResults{
+    padding: 0 1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#exerciseResults button{
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+    width: 8rem;
+}
+
+#exeName{
+    float: left;
+    position: absolute;
+    width: 40%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: #00000000;
+    border-bottom: 1px solid var(--transp-divider);
+    border-radius: 0;
+}
+#exeName:hover{
+    border: none;
+    border-bottom: 1px solid var(--text);
+    background: rgba(255, 255, 255, 0.05);
+}
+#exerciseHistory .popUpCard{
+    padding: 2rem;
+}
+#exerciseHistory #BigTitle{
+    justify-content: left;
+    width: 100%;
+}
+#exerciseHistory .data{
+    max-height: 70%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+/**===================[ Exercise Display ]==========*/
+#exerciseDisplay{
+    height: auto;
+    width: var(--long-side);
+    display: block;
+    padding: 0;
+    background-color: var(--input-bg);
+    overflow: hidden;
+    margin: 1rem;
+}
+#exerciseDisplay section{
+    padding: 1rem;
+}
+
+#exerciseDisplay .title{
+    background-color: var(--transp-divider);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+#exerciseDisplay img{
+    height: 2rem;
+    margin: 0 0.5rem;
+}
+#exerciseDisplay #CornerButton img{
+    height: 1.2rem;
+}
+#exerciseDisplay h3{
+    display: inline-block;
+    margin: 0;
+}
+/**===================[ Activity ]==========*/
+#Activity #steps, #Activity #minutes, #Activity #calories, #Activity .container{
+    width: 100%;
+}
+#Activity .progressBar{
+    height: 2rem;
+    width: 100%;
+    border-radius: var(--border-radius-s);
+}
+
+#Activity #fillbar{
+    background-color: var(--input-bg);
+}
+#Activity .fill{
+    bottom: 0;
+    border-radius: var(--border-radius-s);
+}
+#Activity .pbChildren p, #Activity .pbChildren span{
+    display: inline-block;
+    z-index: 5;
+}
+#Activity .pbChildren img{
+    z-index: 5;
+}
+#Activity #minutes .fill{
+   background-color: #5ad895;
+}
+#Activity #calories .fill{
+    background-color: #ff9900;
+}
+#Highscores .popUpCard{
+    height: var(--long-side);
+}
+#Highscores .subtitle{
+    margin: 0;
+    padding: 0;
+}
+#RotateMe{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    overflow-y: scroll;
+    min-height: 13rem;
+    height: auto;
+    scroll-snap-type: y mandatory;
+    scroll-padding-block: 10rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#RotateMe > div{
+    scroll-snap-align: start;
+}
+#RotateMe::-webkit-scrollbar {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    #RotateMe{
+        flex-direction: row;
+    }
+}
+@media (orientation: portrait) {
+    #RotateMe{
+       display: block;
+    }
+}
+#BadgesWrapper{
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    max-height: 65vh;
+}
+.AchievementBadge{
+    background-color: #eab836;
+    overflow: hidden;
+    border: 0.5rem solid #eab836;
+    border-radius: 0.5rem 0.5rem 50% 50%;
+    min-height: 12rem;
+    min-width: 10rem;
+    position: relative;
+    margin: 1rem;
+    display: block;
+}
+.AchievementBadge > *{
+    z-index: 9;
+}
+.badgeShadow{
+    margin-left: 50%;
+    height: 100%;
+    width: 50%;
+    background-color: #d4a82e;
+    position: absolute;
+    z-index: 1;
+}
+.AchievementBadge h4{
+    top: 0;
+    margin-top: 0.5rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9;
+}
+.AchievementBadge h2, .AchievementBadge .wrap{
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    z-index: 9;
+}
+.AchievementBadge .wrap{
+    position: absolute;
+    bottom: 0.7rem;
+}
+.AchievementBadge span{
+    font-size: 0.7rem;
+    z-index: 9;
+}
+.AchievementBadge img{
+    height: 35%;
+    z-index: 9;
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+/**===================[ Profile ]==========*/
+#Profile{
+    display: none;
+}
+#data>div{
+    margin: 0.5rem;
+}
+/**===================[ MoreInfo ]==========*/
+#MoreInfo{
+    text-align: center;
+}
+#MoreInfo button{
+    padding: 0.5rem;
+    width: 7rem;
+    margin: 0.5rem;
+    background-color: var(--accent-color);
+}
+#MoreInfo button:hover{
+    background-color: var(--accent-lighter);
+}
+#MoreInfo p.bottomCenter{
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+#MoreInfo p b{
+    font-size: 3rem;
+    color: var(--accent-color);
+    font-weight: bolder;
+}
+#MoreInfo img[alt='big logo']{
+    width: 5rem;
+    margin: 1rem;
+}
+#MoreInfo img[alt='small logo']{
+    width: 3rem;
+    margin: 1rem;
+}
+
+/*============[ Dashboard ]===================*/
+#dash{
+    display: flex;
+    width: calc(3*var(--long-side) + 3rem);
+    flex-wrap: wrap;
+}
+
+/*============[ History ]===================*/
+img[alt=clock]{
+    animation-name: twist;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+/*============[ Settings ]===================*/
+#Settings label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Settings label div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#Settings button:not(#CornerButton){
+    margin: 0.5rem;
+    width: 5rem;
+}
+
+#Settings button#Confirm, #Settings button#SettingsBtOS{
+    width: 11rem;
+}
+
+hr.divider{
+    width: 100%;
+    background-color: var(--transp-divider);
+}
+/*============[ ChangePassword ]===================*/
+#ChangePassword{
+    z-index: 9;
+}
+#ChangePassword #blurlayer{
+    background-color: rgba(0, 0, 0, 0.78);
+}
+#ChangePassword h1{
+    text-align: center;
+}
